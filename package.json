@@ -1,0 +1,35 @@
+{
+  "name": "rs-items",
+  "version": "1.0.0",
+  "description": "RuneScape GrandExchange ItemID search&dump script",
+  "main": "index.js",
+  "dependencies": {
+    "request": "^2.72.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zettca/rs-items.git"
+  },
+  "keywords": [
+    "RuneScape",
+    "GrandExchange",
+    "Grand",
+    "Exchange",
+    "RS",
+    "Item",
+    "Searcher",
+    "List",
+    "ItemDB",
+    "Dump"
+  ],
+  "author": "zettca",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/zettca/rs-items/issues"
+  },
+  "homepage": "https://github.com/zettca/rs-items#readme"
+}
