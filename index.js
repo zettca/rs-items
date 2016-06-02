@@ -27,7 +27,7 @@ requestCatAvailables(0);  // category to start from
 /* ========== AUXILIARY STUFFY ========== */
 
 function dumpToFile(filename){
-  let tsv = "ID\tName", csv = "ID,Name";
+  let tsv = "ID\tName\n", csv = "ID,Name\n";
   
   for (let prop in itemList){
     tsv += prop + '\t' + itemList[prop] + '\n';
