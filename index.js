@@ -4,17 +4,17 @@ var fs = require("fs");
 var qs = require("querystring");
 var request = require("request");
 
-const outFile = process.argv[2] || "dump";
-
-const NUM_CATEGORIES = 37;
 const URL_CATS = "http://services.runescape.com/m=itemdb_rs/api/catalogue/category.json?"; // category=N
 const URL_ITEMS = "http://services.runescape.com/m=itemdb_rs/api/catalogue/items.json?"; // category=N&alpha=C&page=N
 const ALPHAS = "#abcdefghijklmnopqrstuvwxyz";
+const NUM_CATEGORIES = 37;
 
 const sec = 1000;
 const TIME_INIT = Date.now();
 var DELAY_ITER = 4*sec;
-var DELAY_WAIT = 30*sec;
+var DELAY_WAIT = 40*sec;
+
+const outFile = process.argv[2] || TIME_INIT || "dump";
 
 process.on('SIGINT', function(){
   dumpToFile(outFile);
@@ -22,12 +22,12 @@ process.on('SIGINT', function(){
 });
 
 var itemList = {};
-requestCatAvailables(0);  // cat to start from
+requestCatAvailables(0);  // category to start from
 
 /* ========== AUXILIARY STUFFY ========== */
 
 function dumpToFile(filename){
-  let tsv = "", csv = "";
+  let tsv = "ID\tName", csv = "ID,Name";
   
   for (let prop in itemList){
     tsv += prop + '\t' + itemList[prop] + '\n';
@@ -35,9 +35,9 @@ function dumpToFile(filename){
   }
   
   log("Dumping ItemList to files...");
-  fs.writeFileSync(filename+".tsv", tsv);
-  fs.writeFileSync(filename+".csv", csv);
-  fs.writeFileSync(filename+".json", JSON.stringify(itemList, null, '\t'));
+  fs.writeFileSync("dumps/"+filename+".tsv", tsv);
+  fs.writeFileSync("dumps/"+filename+".csv", csv);
+  fs.writeFileSync("dumps/"+filename+".json", JSON.stringify(itemList, null, '\t'));
   log("Dumping finished. Bye!");
 }
 
@@ -61,7 +61,7 @@ function requestCatAvailables(cat){
             if (el.items > 0)
               alphas += el.letter;
           
-          requestCatItems(cat, alphas, 1);
+          requestCatItems(cat, alphas, 1); // get items from available alphas
           
         } catch (e){
           log("ERR: " + JSON.stringify(query));
