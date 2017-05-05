@@ -31,9 +31,9 @@ function dumpToFiles(){
   }
 
   log("Dumping items to files...");
-  fs.writeFileSync("dumps/"+OUT_FILE+".tsv", tsv);
-  fs.writeFileSync("dumps/"+OUT_FILE+".csv", csv);
-  fs.writeFileSync("dumps/"+OUT_FILE+".json", JSON.stringify(itemList, null, '\t'));
+  fs.writeFileSync("dumps/tsv/"+OUT_FILE+".tsv", tsv);
+  fs.writeFileSync("dumps/csv/"+OUT_FILE+".csv", csv);
+  fs.writeFileSync("dumps/json/"+OUT_FILE+".json", JSON.stringify(itemList, null, '\t'));
   log("Dumping done. Bye!");
   process.exit();
 }
