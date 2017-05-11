@@ -7,6 +7,11 @@
     "request": "^2.81.0",
     "moment": "^2.18.1"
   },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node items.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zettca/rs-items.git"

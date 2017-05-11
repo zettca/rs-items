@@ -13,8 +13,15 @@ cd rs-items
 npm install
 ```
  
-### Usage
-1. Run `node items.js` with an optional *FILENAME* parameter.
+### Usage (items.js)
+1. Run `node items.js` with an optional *FILENAME* argument.
 2. Wait for about **50-60 minutes** for the script to GET all the items.
     * This is because the API will block if too many requests are made. Requests can only be made about every *4 to 5 seconds*, and there are about *750 requests* to be made.
     * The output will be dumped to `/dumps` in `.tsv`, `.csv` and `.json` formats.
+
+### Usage (items-proxy.js)
+Alternatively, you may use proxies to avoid getting blocked
+1. Create a file with a list of proxies in format `http://ADDRESS:PORT`
+2. Run `node items-proxy.js` with *FILENAME* and *PROXY-FILENAME* as optional argument.
+    * Each proxy will process a category in parallel.
+    * The final output will be dumped to `/dumps` in `.tsv`, `.csv` and `.json` formats.
