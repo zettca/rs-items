@@ -19,9 +19,18 @@ npm install
     * This is because the API will block if too many requests are made. Requests can only be made about every *4 to 5 seconds*, and there are about *750 requests* to be made.
     * The output will be dumped to `/dumps` in `.tsv`, `.csv` and `.json` formats.
 
-### Usage (items-proxy.js)
+### Usage (itemsp.js)
 Alternatively, you may use proxies to avoid getting blocked
 1. Create a file with a list of proxies in format `http://ADDRESS:PORT`
-2. Run `node items-proxy.js` with *FILENAME* and *PROXY-FILENAME* as optional argument.
+2. Run `node itemsp.js` with *FILENAME* and *PROXY-FILENAME* as optional arguments.
     * Each proxy will process a category in parallel.
     * The final output will be dumped to `/dumps` in `.tsv`, `.csv` and `.json` formats.
+
+### Usage (itemspe.js)
+Evenly distributed proxy workload
+1. Create a file with a list of proxies in format `http://ADDRESS:PORT`
+2. Run `node itemspe.js` with *PROXY-FILENAME* and *FILENAME* as optional arguments.
+    * Every 5 seconds all proxies will look for work (requests)
+    * Firstly, proxies fill a list with items requests from category (~800 requests)
+    * Then, they evenly fill the `itemList` by requesting the items
+    * The final output will be dumped to `/dumps` in `.tsv`, `.csv` and `.json` formats.
