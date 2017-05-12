@@ -10,11 +10,11 @@ const URL_ITEMS = "http://services.runescape.com/m=itemdb_rs/api/catalogue/items
 const NUM_CATEGORIES = 37;
 
 const TIME_INIT = Date.now();
-const DELAY_ITER = 6*1000;
+const DELAY_ITER = 5*1000;
 const DELAY_WAIT = 10*DELAY_ITER;
 
-const OUT_FILE = process.argv[2] || mo(TIME_INIT).format("YMMDDHHmmss");
-const PROXIES_FILE = process.argv[3] || "proxies.tsv";
+const OUT_FILE = process.argv[3] || mo(TIME_INIT).format("YMMDDHHmmss");
+const PROXIES_FILE = process.argv[2] || "plist.tsv";
 
 const State = { TODO: 0, DOING: 1, DONE: 2 };
 
@@ -41,20 +41,24 @@ function main(){
     proxyCats[catProxyMap[i]].push(i);
   }
 
-  for (let proxy in proxyCats){
-    let cat = getFreeCat();
-    catProxyMap[cat] = proxy;
-    requestCategory(cat);
-  }
+  for (let proxy in proxyCats) assignProxyToNewCat(proxy);
+}
+
+function assignProxyToNewCat(proxy){
+  let cat = getFreeCat();
+  if (cat === null) return;
+  catProxyMap[cat] = proxy;
+  requestCategory(cat);
 }
 
 function getFreeCat(){
   for (let cat in catStates){
-    if (catStates[cat] === State.TODO) {
+    if (catStates[cat] === State.TODO){
       catStates[cat] = State.DOING;
       return cat;
     }
   }
+  return null;
 }
 
 function dumpToFiles(){
@@ -65,11 +69,10 @@ function dumpToFiles(){
     csv += id + ',' + itemList[id] + '\n';
   }
 
-  log("Dumping items to files...");
   fs.writeFileSync("dumps/tsv/"+OUT_FILE+".tsv", tsv);
   fs.writeFileSync("dumps/csv/"+OUT_FILE+".csv", csv);
   fs.writeFileSync("dumps/json/"+OUT_FILE+".json", JSON.stringify(itemList, null, '\t'));
-  log("Dumping done. Bye!");
+  log("\nItems successfully dumped to files.");
   process.exit();
 }
 
@@ -118,12 +121,10 @@ function requestCatItems(cat, alphas, page){
         } else if (alphas.length > 1){ // go next alpha
           setTimeout(requestCatItems, DELAY_ITER, cat, alphas.substring(1), 1);
         } else if (alphas.length === 1){ // go next category
-          if (catStates.every((el) => el === State.DONE)){
-            dumpToFiles();
-          } else{
-            log("FIN", cat, opts.proxy);
-            // TODO: pick another category
-          }
+          log("FIN", cat, opts.proxy);
+          catStates[cat] = State.DONE;
+          log(catStates.join(""));
+          (catStates.every((el) => el === State.DONE)) ? dumpToFiles() : assignProxyToNewCat(opts.proxy);
         }
       } catch (e){
         log("ERR", query);
