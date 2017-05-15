@@ -30,7 +30,7 @@ Alternatively, you may use proxies to avoid getting blocked
 Evenly distributed proxy workload
 1. Create a file with a list of proxies in format `http://ADDRESS:PORT`
 2. Run `node itemspe.js` with *PROXY-FILENAME* and *FILENAME* as optional arguments.
-    * Every 5 seconds all proxies will look for work (requests)
-    * Firstly, proxies fill a list with items requests from category (~800 requests)
-    * Then, they evenly fill the `itemList` by requesting the items
-    * The final output will be dumped to `/dumps` in `.tsv`, `.csv` and `.json` formats.
+    * Every 5 seconds all proxies will look for work (requests)
+    * Firstly, proxies fill a list with items requests from category (~800 requests)
+    * Then, they evenly fill the `itemList` by requesting the items
+    * The final output will be dumped to `/dumps` in `.tsv`, `.csv` and `.json` formats.
