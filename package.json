@@ -2,14 +2,9 @@
   "name": "rs-items",
   "version": "1.0.0",
   "description": "RuneScape GrandExchange ItemID search&dump script",
-  "main": "items.js",
-  "dependencies": {
-    "request": "^2.81.0",
-    "moment": "^2.18.1"
-  },
-  "devDependencies": {},
   "scripts": {
-    "start": "node items.js",
+    "prestart": "babel src -d build",
+    "start": "node build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,8 +25,13 @@
   ],
   "author": "zettca",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/zettca/rs-items/issues"
+  "dependencies": {
+    "axios": "^0.17.1",
+    "moment": "^2.18.1"
   },
-  "homepage": "https://github.com/zettca/rs-items#readme"
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
 }
