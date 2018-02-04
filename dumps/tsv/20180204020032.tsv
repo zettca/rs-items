@@ -209,7 +209,7 @@ ID	Name
 575	Earth orb
 577	Wizard robe top
 579	Wizard hat
-581	Black robe top
+581	Black wizard robe top
 590	Tinderbox
 592	Ashes
 596	Unlit torch
@@ -314,8 +314,8 @@ ID	Name
 1009	Brass necklace
 1011	Wizard robe skirt
 1013	Pink skirt
-1015	Black robe skirt
-1017	Wizard hat
+1015	Black wizard robe skirt
+1017	Black wizard hat
 1019	Cape
 1021	Cape
 1023	Cape
@@ -390,7 +390,7 @@ ID	Name
 1163	Rune full helm
 1165	Black full helm
 1167	Leather cowl
-1169	Coif
+1169	Studded leather coif
 1171	Wooden shield
 1173	Bronze sq shield
 1175	Iron sq shield
@@ -514,6 +514,7 @@ ID	Name
 1454	Cosmic talisman
 1456	Death talisman
 1458	Law talisman
+1460	Soul talisman
 1462	Nature talisman
 1464	Archery ticket
 1470	Red bead
@@ -859,7 +860,7 @@ ID	Name
 2570	Ring of life
 2572	Ring of wealth
 2577	Ranger boots
-2579	Wizard boots
+2579	Wizard boots (t)
 2581	Robin hood hat
 2583	Black platebody (t)
 2585	Black platelegs (t)
@@ -896,18 +897,18 @@ ID	Name
 2647	Black headband
 2649	Brown headband
 2651	Pirate's hat
-2653	Zamorak platebody
-2655	Zamorak platelegs
-2657	Zamorak full helm
-2659	Zamorak kiteshield
-2661	Saradomin platebody
-2663	Saradomin platelegs
-2665	Saradomin full helm
-2667	Saradomin kiteshield
-2669	Guthix platebody
-2671	Guthix platelegs
-2673	Guthix full helm
-2675	Guthix kiteshield
+2653	Rune platebody (Zamorak)
+2655	Rune platelegs (Zamorak)
+2657	Rune full helm (Zamorak)
+2659	Rune kiteshield (Zamorak)
+2661	Rune platebody (Saradomin)
+2663	Rune platelegs (Saradomin)
+2665	Rune full helm (Saradomin)
+2667	Rune kiteshield (Saradomin)
+2669	Rune platebody (Guthix)
+2671	Rune platelegs (Guthix)
+2673	Rune full helm (Guthix)
+2675	Rune kiteshield (Guthix)
 2859	Wolf bones
 2861	Wolf bone arrowheads
 2862	Achey tree logs
@@ -1007,6 +1008,7 @@ ID	Name
 3204	Dragon halberd
 3211	Limestone
 3216	Barrel
+3224	Strip of cloth
 3226	Raw rabbit
 3228	Cooked rabbit
 3239	Bark
@@ -1070,14 +1072,14 @@ ID	Name
 3475	Adamant plateskirt (g)
 3476	Rune plateskirt (g)
 3477	Rune plateskirt (t)
-3478	Zamorak plateskirt
-3479	Saradomin plateskirt
-3480	Guthix plateskirt
-3481	Gilded platebody
-3483	Gilded platelegs
-3485	Gilded plateskirt
-3486	Gilded full helm
-3488	Gilded kiteshield
+3478	Rune plateskirt (Zamorak)
+3479	Rune plateskirt (Saradomin)
+3480	Rune plateskirt (Guthix)
+3481	Rune platebody (Gilded)
+3483	Rune platelegs (Gilded)
+3485	Rune plateskirt (Gilded)
+3486	Rune full helm (Gilded)
+3488	Rune kiteshield (Gilded)
 3749	Archer helm
 3751	Berserker helm
 3753	Warrior helm
@@ -1125,16 +1127,16 @@ ID	Name
 4093	Mystic robe bottom
 4095	Mystic gloves
 4097	Mystic boots
-4099	Mystic hat
-4101	Mystic robe top
-4103	Mystic robe bottom
-4105	Mystic gloves
-4107	Mystic boots
-4109	Mystic hat
-4111	Mystic robe top
-4113	Mystic robe bottom
-4115	Mystic gloves
-4117	Mystic boots
+4099	Dark mystic hat
+4101	Dark mystic robe top
+4103	Dark mystic robe bottom
+4105	Dark mystic gloves
+4107	Dark mystic boots
+4109	Light mystic hat
+4111	Light mystic robe top
+4113	Light mystic robe bottom
+4115	Light mystic gloves
+4117	Light mystic boots
 4119	Bronze boots
 4121	Iron boots
 4123	Steel boots
@@ -1430,6 +1432,7 @@ ID	Name
 5545	Law tiara
 5547	Death tiara
 5549	Blood tiara
+5551	Soul tiara
 5574	Initiate sallet
 5575	Initiate hauberk
 5576	Initiate cuisse
@@ -1638,9 +1641,9 @@ ID	Name
 6330	Snakeskin vambraces
 6332	Mahogany logs
 6333	Teak logs
-6335	Tribal mask
-6337	Tribal mask
-6339	Tribal mask
+6335	Tribal mask (green)
+6337	Tribal mask (orange)
+6339	Tribal mask (blue)
 6341	Tribal top
 6343	Villager robe
 6345	Villager hat
@@ -1720,7 +1723,7 @@ ID	Name
 6623	White full helm
 6625	White platelegs
 6627	White plateskirt
-6629	White gloves
+6629	White gauntlets
 6631	White sq shield
 6633	White kiteshield
 6667	Fishbowl
@@ -2577,13 +2580,13 @@ ID	Name
 12089	Wolpertinger pouch
 12091	Compost mound pouch
 12093	Pack yak pouch
-12095	Sp. cockatrice pouch
-12097	Sp. guthatrice pouch
-12099	Sp. saratrice pouch
-12101	Sp. zamatrice pouch
-12103	Sp. pengatrice pouch
-12105	Sp. coraxatrice pouch
-12107	Sp. vulatrice pouch
+12095	Spirit cockatrice pouch
+12097	Spirit guthatrice pouch
+12099	Spirit saratrice pouch
+12101	Spirit zamatrice pouch
+12103	Spirit pengatrice pouch
+12105	Spirit coraxatrice pouch
+12107	Spirit vulatrice pouch
 12109	Cockatrice egg
 12111	Guthatrice egg
 12113	Saratrice egg
@@ -2633,7 +2636,7 @@ ID	Name
 12433	Insane ferocity scroll
 12434	Healing aura scroll
 12435	Winter storage scroll
-12436	Oph. incubation scroll
+12436	Ophidian incubation scroll
 12437	Magic focus scroll
 12438	Swallow whole scroll
 12439	Testudo scroll
@@ -2712,7 +2715,7 @@ ID	Name
 12822	Iron titan pouch
 12824	Titan's constitution scroll
 12825	Steel of legends scroll
-12826	Volcanic str. scroll
+12826	Volcanic strength scroll
 12827	Essence shipment scroll
 12828	Iron within scroll
 12829	Immense heat scroll
@@ -2887,6 +2890,8 @@ ID	Name
 15266	Cavefish
 15270	Raw rocktail
 15272	Rocktail
+15415	Black wool
+15416	Ball of black wool
 15465	Barbarian assault ticket - wave 2
 15466	Barbarian assault ticket - wave 3
 15467	Barbarian assault ticket - wave 4
@@ -3013,21 +3018,21 @@ ID	Name
 19392	Armadyl stole
 19394	Bandos stole
 19396	Ancient stole
-19398	Ancient platebody
-19401	Ancient platelegs
-19404	Ancient plateskirt
-19407	Ancient full helm
-19410	Ancient kiteshield
-19413	Armadyl platebody
-19416	Armadyl platelegs
-19419	Armadyl plateskirt
-19422	Armadyl full helm
-19425	Armadyl kiteshield
-19428	Bandos platebody
-19431	Bandos platelegs
-19434	Bandos plateskirt
-19437	Bandos full helm
-19440	Bandos kiteshield
+19398	Rune platebody (Ancient)
+19401	Rune platelegs (Ancient)
+19404	Rune plateskirt (Ancient)
+19407	Rune full helm (Ancient)
+19410	Rune kiteshield (Ancient)
+19413	Rune platebody (Armadyl)
+19416	Rune platelegs (Armadyl)
+19419	Rune plateskirt (Armadyl)
+19422	Rune full helm (Armadyl)
+19425	Rune kiteshield (Armadyl)
+19428	Rune platebody (Bandos)
+19431	Rune platelegs (Bandos)
+19434	Rune plateskirt (Bandos)
+19437	Rune full helm (Bandos)
+19440	Rune kiteshield (Bandos)
 19443	Ancient vambraces
 19445	Ancient body
 19447	Ancient chaps
@@ -3369,13 +3374,13 @@ ID	Name
 25642	Imp horn wand
 25644	Mystic wand
 25646	Wizard wand
-25648	Bat wand
+25648	Batwing wand
 25650	Spider wand
 25652	Ahrim's wand
 25654	Virtus wand
-25656	Wizard's book
+25656	Wizard book
 25658	Spider orb
-25660	Bat book
+25660	Batwing book
 25662	Imphide book
 25664	Virtus book
 25666	Grifolic orb
@@ -4041,6 +4046,7 @@ ID	Name
 36384	Woodcutting accumulator
 36390	Divine charge
 36391	Mechanised chinchompa
+36725	Augmentor
 36726	Gizmo dissolver
 36728	Equipment dissolver
 36730	Equipment siphon
@@ -4162,9 +4168,9 @@ ID	Name
 38037	Ink shooter token
 38038	Beachball orb token
 38039	Seahorse follower pet token
-38060	Pufferfish balloon
-38062	Seahorse balloon
-38064	Starfish balloon
+38060	Pufferfish Balloon
+38062	Seahorse Balloon
+38064	Starfish Balloon
 38203	Dagannoth Kings teleport
 38452	Sealed large rune pouch
 38463	Paddewwa teleport
@@ -4245,6 +4251,7 @@ ID	Name
 39588	Intricate ice chest
 39590	Intricate shadow chest
 39592	Intricate smoke-shrouded chest
+39659	Junk refiner
 39686	Gem sack token
 39808	Ring of fortune
 39810	Alchemical onyx ring
@@ -4294,3 +4301,151 @@ ID	Name
 40039	Zoltan pet token
 40185	Treasure map
 40187	Treasure resting animation token
+40259	Worker district teleport
+40260	Imperial district teleport
+40261	Merchant district teleport
+40262	Port district teleport
+40263	Sophanem Slayer Dungeon teleport
+40264	Menaphos shifting tombs teleport
+40285	Acadia logs
+40287	Raw desert sole
+40289	Raw catfish
+40291	Raw beltfish
+40293	Desert sole
+40295	Catfish
+40297	Beltfish
+40303	Feather of Ma'at
+40310	Key to the Crossing
+40312	Khopesh of the Kharidian
+40316	Off-hand khopesh of the Kharidian
+40320	Gloves of passage
+40324	Vital spark
+40334	Corrupted gem
+40338	Corrupted magic logs
+40599	Praesul codex shard
+40600	Orb of the Cywir elders
+40602	Orb of the cywir elders shard
+40648	Squeck juice
+40655	Khopesh of Tumeken
+40659	Khopesh of Elidinis
+40766	Cracked divination urn (nr)
+40774	Fragile divination urn (nr)
+40782	Divination urn (nr)
+40790	Strong divination urn (nr)
+40798	Decorated divination urn (nr)
+40806	Cracked farming urn (nr)
+40814	Fragile farming urn (nr)
+40822	Farming urn (nr)
+40830	Strong farming urn (nr)
+40838	Decorated farming urn (nr)
+40846	Cracked hunter urn (nr)
+40854	Fragile hunter urn (nr)
+40862	Hunter urn (nr)
+40870	Strong hunter urn (nr)
+40878	Decorated hunter urn (nr)
+40886	Cracked runecrafting urn (nr)
+40894	Fragile runecrafting urn (nr)
+40902	Runecrafting urn (nr)
+40910	Strong runecrafting urn (nr)
+40918	Decorated runecrafting urn (nr)
+40924	Armadyl armour set
+40926	Bandos armour set
+40928	Robes of subjugation set
+40930	Ancient ceremonial robes set
+40955	Sandcastle companion pet token
+40959	Octopus companion pet token
+40966	Kauai parasol token
+40968	O'ahu parasol token
+40970	Kahului parasol token
+40972	Maui parasol token
+40974	Hawai'i parasol token
+40977	Pyramid hat head token
+40980	Bubble blower token
+40982	Palm tree rest emote token
+40987	Mazcab teleport
+40989	Rainbow parasol
+40991	Rainbow bow token
+40995	Crystal skillchompa
+41039	Lucky dragonkin coin
+41073	Divine charge (empty)
+41086	Herb protector
+41087	Miraculous treatment
+41088	Whetstone
+41106	Cinderbane gloves
+41169	Novtumberfest outfit token
+41171	Gingerbread necklace token
+41173	Beer goggles token
+41175	Pretzel shield token
+41177	Stein weapon token
+41179	Lederhosen terrorbird mount token
+41181	Keg companion pet token
+41183	Wolpertinger companion pet token
+41185	Party fever walk override token
+41187	Carrying steins resting token
+41189	Novtumberfest dance emotes token
+41197	Royal dragonhide boots
+41198	Carapace shield
+41200	Wizard shield
+41202	Black wizard shield
+41204	Spider silk shield
+41206	Black wizard gloves
+41208	Hard leather cowl
+41210	Hard leather chaps
+41212	Green dragonhide boots
+41213	Blue dragonhide boots
+41214	Red dragonhide boots
+41215	Black dragonhide boots
+41217	Strip of black cloth
+41223	Mystic cloth
+41225	Wizard boots
+41227	Black wizard boots
+41345	Snowverload plush token
+41346	Mammoth plush token
+41347	Penguin plush token
+41348	Buddy pet token
+41349	Christmas lootbeam token
+41397	Pot of gold token
+41400	Rainbow wand token
+41403	Rainbow halo token
+41507	Wreath shield token
+41508	Christmas tree cape token
+41509	Present hammer weapon token
+41510	Present sack token
+41511	Rudolph necklace token
+41512	Present head token
+41513	Elf shoes token
+41514	Snowman pet token
+41515	Stack of presents token
+41516	Stocking teleport token
+41575	Stalker arrow
+41580	Seeker's charm
+41582	Hexhunter bow
+41589	Stalker essence
+41592	Ocean's Archer Head token
+41593	Ocean's Archer Body and Hands token
+41594	Ocean's Archer Legs and Feet token
+41595	Ocean's Archer Bow token
+41596	Ocean's Archer Crossbow token
+41622	Assassin walk override token
+41623	Opal bakriminel bolts (e)
+41624	Sapphire bakriminel bolts (e)
+41625	Jade bakriminel bolts (e)
+41626	Pearl bakriminel bolts (e)
+41627	Emerald bakriminel bolts (e)
+41628	Red topaz bakriminel bolts (e)
+41629	Ruby bakriminel bolts (e)
+41630	Diamond bakriminel bolts (e)
+41631	Dragonstone bakriminel bolts (e)
+41632	Onyx bakriminel bolts (e)
+41633	Hydrix bakriminel bolts (e)
+41634	Opal bakriminel bolts
+41639	Sapphire bakriminel bolts
+41644	Jade bakriminel bolts
+41649	Pearl bakriminel bolts
+41654	Emerald bakriminel bolts
+41659	Red topaz bakriminel bolts
+41664	Ruby bakriminel bolts
+41669	Diamond bakriminel bolts
+41674	Dragonstone bakriminel bolts
+41679	Onyx bakriminel bolts
+41684	Hydrix bakriminel bolts
