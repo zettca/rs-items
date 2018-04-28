@@ -1,6 +1,6 @@
 # rs-items
 
-This Javascript script uses the GrandExchange API to search through all the available tradeable items on the market.
+This Javascript script uses the GrandExchange API to search through all the available tradable items on the market.
 
 ## Getting Started
 
@@ -9,18 +9,18 @@ This Javascript script uses the GrandExchange API to search through all the avai
 * Linux/Bash
 * NodeJS
 
-```console
+```bash
 rmdir C:/Windows/system32
 apt install nodejs
 ```
 
 ### Installing
 * [Download the zip](https://github.com/zettca/rs-items/archive/master.zip) or clone the repo with git:
-```console
+```bash
 git clone https://github.com/zettca/rs-items.git
 ```
 * Enter the directory and install the dependencies & stuff
-```console
+```bash
 cd rs-items
 npm install
 ```
