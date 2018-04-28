@@ -7,7 +7,7 @@ import proxies from '../proxies/plist.json';
 
 export const TIME_INIT = Date.now();
 
-const OUTPUT_FILE = mo(TIME_INIT).format('YMMDDHHmmss');
+const OUTPUT_FILE = 'latest' || mo(TIME_INIT).format('YMMDDHHmmss');
 const proxyList = proxies.map((url) => new Proxy(...url.split(':')));
 
 const itemList = {};

@@ -24,9 +24,8 @@ export function dumpToFiles(filename, items) {
     return res;
   };
 
-  fs.writeFileSync('dumps/csv/' + filename + '.csv', dumpSplitFormat(','));
-  fs.writeFileSync('dumps/tsv/' + filename + '.tsv', dumpSplitFormat('\t'));
-  fs.writeFileSync('dumps/json/' + filename + '.json', JSON.stringify(items, null, '\t'));
+  fs.writeFileSync('dumps/' + filename + '.tsv', dumpSplitFormat('\t'));
+  fs.writeFileSync('dumps/' + filename + '.json', JSON.stringify(items, null, '\t'));
   log('Items successfully dumped to files.');
   process.exit();
 }
