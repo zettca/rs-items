@@ -27,7 +27,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "axios": "^0.17.1",
-    "moment": "^2.18.1"
+    "moment": "^2.22.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

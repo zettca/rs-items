@@ -60,6 +60,9 @@ typings/
 # build path
 build/
 
+# WebStorm
+.idea/
+
 # proxies lists
 plist.json
 plist.tsv

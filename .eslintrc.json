@@ -28,6 +28,10 @@
       "error",
       "always"
     ],
-    "no-console": "warn"
+    "no-console": "warn",
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ]
   }
 }

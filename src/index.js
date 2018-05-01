@@ -1,4 +1,3 @@
-import mo from 'moment';
 import config from './config';
 import Request from './Request';
 import Proxy from './Proxy';
@@ -7,14 +6,15 @@ import proxies from '../proxies/plist.json';
 
 export const TIME_INIT = Date.now();
 
-const OUTPUT_FILE = 'latest' || mo(TIME_INIT).format('YMMDDHHmmss');
+const OUTPUT_FILE = process.env.OUTNAME || 'latest';
+
+// Initialize Proxies, Requests and itemList
 const proxyList = proxies.map((url) => new Proxy(...url.split(':')));
-
-const itemList = {};
 const catRequests = [], itemRequests = [];
+const itemList = {};
 
-for (let i = 0; i <= config.NUM_CATEGORIES; i++) {
-  catRequests.push(new Request(config.URL_CATS, { category: i }));
+for (let i = 0; i <= config.API.NUM_CATEGORIES; i++) {
+  catRequests.push(new Request(config.API.URL_CATS, { category: i }));
 }
 
 const int = setInterval(mainLoop, config.TIME_LOOP);
@@ -36,7 +36,7 @@ function mainLoop() {
 }
 
 function printStatus() {
-  log('STAT', proxyList.map((p) => p.state).join(''));
+  log('PROXYSTAT', proxyList.map((p) => p.state).join(''));
   if (!allDone(catRequests)) {
     const done = catRequests.filter((req) => req.getState() === Request.State.DONE).length;
     log('DOING', 'Categories', `(${done}/${catRequests.length})`);
@@ -48,7 +48,7 @@ function printStatus() {
   }
 }
 
-function getWork() { // returns a Request to work on
+function getWork() { // get a Request to work on
   // PART 1: Categories
   const cat = getTodo(catRequests);
   if (cat) {
@@ -76,14 +76,16 @@ function getWork() { // returns a Request to work on
   }
 }
 
+/* ========== GET Request's DATA ========== */
+
 function fillItemRequests() {
   catRequests.forEach((req, i) => {
     req.data.alpha.forEach((alpha) => {
       let j = 1, num = alpha.items;
       while (num > 0) {
         const params = { category: i, alpha: alpha.letter, page: j++ };
-        itemRequests.push(new Request(config.URL_ITEMS, params));
-        num -= config.NUM_ITEMS_PER_PAGE;
+        itemRequests.push(new Request(config.API.URL_ITEMS, params));
+        num -= config.API.NUM_ITEMS_PER_PAGE;
       }
     });
   });

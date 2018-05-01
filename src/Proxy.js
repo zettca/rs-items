@@ -5,7 +5,7 @@ const StateProxy = { FREE: '_', BUSY: '+', DEAD: '-' };
 
 const axiosI = axios.create({
   timeout: config.TIMEOUT,
-  baseURL: config.URL_BASE,
+  baseURL: config.API.URL_BASE,
 });
 
 class Proxy {
@@ -25,7 +25,7 @@ class Proxy {
         request.setData(res.data);
         setTimeout(() => {
           this.state = StateProxy.FREE;
-        }, config.DELAY_ITER);
+        }, config.TIME_WAIT);
       })
       .catch((err) => {
         //console.log('ERROR fetching ' + request.path);
